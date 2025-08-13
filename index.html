@@ -1,94 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
-                <img src="img/lossy-page1-640px-Os_Mutantes.tif (1).png" alt="A imagem apresenta o grupo musical Os mutantes, sao tres pessoas cantando em  dois microfones" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raízes Sertanejas</title>
 
-              </div>
-        </section>
-
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center">
-                    <img src="img/image (1).png" class="rounded-pill" alt="" width="273" height="331" loading="lazy">
-                </div>
-                <div class="col-5">
-                    <h2>O que foi a Tropicália?</h2>
-                    <p class="p-2">A Tropicália, também conhecida como Tropicalismo, foi um movimento cultural
-                        brasileiro que surgiu na década de 1960, tendo seu auge entre 1967 e 1968. Esse movimento
-                        abrangeu várias expressões artísticas, como a música, o cinema, o teatro e as artes plásticas, e
-                        teve como principal característica a mistura de elementos da cultura brasileira tradicional com
-                        influências estrangeiras, especialmente do rock e da música pop. Fonte: Site Toda a matéria</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Gilberto_Gil_nos_anos_1960.tif.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Caetano_Veloso_no_III_Festival_da_Música_Popular.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-             </div>
-        </section>
-
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+  <!-- BOOTSTRAP & ICONES -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
   
+  <!-- ESTILO CUSTOMIZADO -->
+  <style>
+    body {
+      background-color: #fdf6f0;
+      font-family: 'Georgia', serif;
+    }
+
+    header {
+      background: url('img/fundo-sertanejo.jpg') center/cover no-repeat;
+      color: white;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .inicio-fundo {
+      background: url('img/campo-viola.jpg') center/cover no-repeat;
+      padding: 100px 20px;
+      border-radius: 20px;
+    }
+
+    .botao-inicio {
+      background-color: #8b4513;
+      border: none;
+    }
+
+    .botao-inicio:hover {
+      background-color: #a0522d;
+    }
+
+    .fundo-galeria {
+      background-color: #fffaf0;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .formulario {
+      background-color: #fff8e7;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background-color: #e0c9a6;
+      color: #3e2c1e;
+    }
+
+    footer i {
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+
+    h1, h2 {
+      color: #5c3a21;
+    }
+
+    @media (max-width: 768px) {
+      .inicio-fundo {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .esquerda-conteudo img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .col-5 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="p-5">
+    <nav class="container d-flex justify-content-between align-items-center flex-wrap">
+      <img src="img/logo-sertanejo.png" alt="Logotipo Raízes Sertanejas" class="nav-img" loading="lazy" width="120" />
+      <ul class="nav mt-3 mt-md-0">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#historia">História</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section id="inicio" aria-label="Sessão de Boas-vindas" class="my-5">
+      <div class="inicio-fundo d-flex justify-content-between align-items-center flex-wrap">
+        <div class="esquerda-conteudo">
+          <h1 class="display-5 text-white fst-italic fw-bold mb-4">Bem-vindo ao mundo da música raiz!</h1>
+          <img src="img/logo-sertanejo-secundario.png" alt="Logo secundário Raízes Sertanejas" class="mb-3" width="350" loading="lazy" />
+          <a href="#historia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" aria-label="História da Música Sertaneja" class="my-5 pt-5">
+      <div class="container d-flex align-items-center flex-wrap">
+        <div class="col-12 col-md-6">
+          <h2>A História do Sertanejo</h2>
+          <p class="p-2">A música sertaneja tem raízes profundas no interior do Brasil, sendo uma das expressões culturais mais autênticas do país. Desde as modas de viola até os sucessos contemporâneos, ela evoluiu sem perder a alma do campo. Representa o amor, a terra, a família e o coração caipira do nosso povo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" aria-label="Galeria de Imagens Sertanejas">
+      <h2 class="text-center pt-5">Galeria Sertaneja</h2>
+      <div class="container p-3 mt-3 fundo-galeria">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <img src="img/dupla-sertaneja-1.jpg" class="img-fluid rounded-5" alt="Dupla sertaneja clássica" loading="lazy" />
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/viola-sertao.jpg" class="img-fluid rounded-5" alt="Viola típica do sertão" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" aria-label="Formulário de Contato">
+      <div class="container p-5 d-flex justify-content-center">
+        <div class="col-md-8 col-lg-10 rounded-5 formulario">
+          <h2 class="mb-3">Fale com a gente</h2>
+          <form>
+            <div class="form-group mb-3">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center p-4 fst-italic">
+    <p>Siga nosso som nas redes:</p>
+    <a href="#" class="text-dark"><i class="bi bi-whatsapp" title="WhatsApp"></i></a>
+    <a href="#" class="text-dark"><i class="bi bi-instagram" title="Instagram"></i></a>
+    <a href="#" class="text-dark"><i class="bi bi-tiktok" title="TikTok"></i></a>
+    <p class="mt-3 mb-0">
+      Desenvolvido por <a href="https://github.com/seuusuario" class="fw-bold text-dark text-decoration-none">SeuGitHubSertanejo</a> – um projeto com alma caipira 🤠
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
